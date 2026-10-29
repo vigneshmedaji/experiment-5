@@ -1,0 +1,80 @@
+# Experiment 5: Continuous Integration and Development Using Jenkins
+
+## Aim
+To demonstrate Continuous Integration (CI) and Continuous Development using Jenkins for automating the software development process.
+
+## Objectives
+1. To understand the concept of Continuous Integration.
+2. To explore Jenkins as an automation tool.
+3. To create and configure a Jenkins job.
+4. To automate the execution of a simple build.
+5. To understand the role of Jenkins in the DevOps lifecycle.
+
+## Software Requirements
+- Jenkins
+- Java Development Kit (JDK)
+- Git
+- Web browser
+- Sample project source code
+
+## Introduction
+Jenkins is an open-source automation server used to automate building, testing, and deploying software applications. It supports Continuous Integration and Continuous Delivery through jobs, plugins, and pipelines. Developers can integrate code changes frequently, detect errors early, and improve software quality.
+
+## Procedure
+1. Install Java and Jenkins on a supported environment.
+2. Start Jenkins and open the dashboard in a web browser.
+3. Install the required plugins.
+4. Create a new Jenkins job using the **New Item** option.
+5. Configure the job with a suitable name.
+6. Connect the project to a Git repository, if required.
+7. Configure the build steps to execute the required commands.
+8. Save the configuration and click **Build Now**.
+9. Open the build history and select **Console Output** to examine the results.
+10. Modify the source code and run another build to observe the changes.
+
+## Sample Pipeline Script
+
+```groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing the application'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deployment stage completed'
+            }
+        }
+    }
+}
+```
+
+## Expected Output
+
+```text
+Building the application
+Testing the application
+Deployment stage completed
+Finished: SUCCESS
+```
+
+## Result
+Studied the implementation of a basic Jenkins pipeline and understood how CI/CD automation can organize build, test, and deployment stages.
+
+## Applications
+- Automated software builds
+- Continuous Integration
+- Automated testing
+- Continuous Delivery
+- DevOps workflow automation
